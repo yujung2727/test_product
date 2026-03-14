@@ -1,10 +1,13 @@
 <!doctype html>
 <html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Animal Face Match</title>
   <link href='/style.css' rel='stylesheet'>
+  <title>내 남자친구는 무슨 상?</title>
+  <link href="/style.css" rel="stylesheet">
 </head>
 <body>
   <h1>Which animal do you look like?</h1>
@@ -19,8 +22,32 @@
   
   <img id="image-preview" src="" alt="Image preview" style="max-width: 500px; display: none;">
   
+  <main class="container">
+    <h1>내 남자친구는 무슨 상? 🥔🕌</h1>
+    <p class="subtitle">사진을 업로드하면 감자상/아랍상 AI 결과를 보여줘요.</p>
+
+    <section class="card">
+      <div class="controls">
+        <input id="image-upload" type="file" accept="image/*" />
+        <button id="predict-button" type="button" disabled>분석하기</button>
+      </div>
+
+      <div id="status" class="status">모델을 불러오는 중...</div>
+
+      <div id="preview-wrapper" class="preview-wrapper hidden">
+        <img id="preview-image" alt="업로드한 이미지 미리보기" />
+      </div>
+
+      <div id="top-result" class="top-result"></div>
+      <div id="label-container" class="label-container"></div>
+    </section>
+  </main>
+
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0/dist/mobilenet.min.js"></script>
   <script defer type="text/javascript" src="/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+  <script defer src="/main.js"></script>
 </body>
+</html>
 </html>
